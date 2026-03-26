@@ -1,0 +1,37 @@
+<div id="calculator">
+    <h2>Pro Trade Calculator</h2>
+
+    <!-- SYMBOL -->
+    <label for="symbol">Trading Pair</label>
+    <input list="symbols" id="symbol" placeholder="Select Symbol" />
+
+    <!-- BUY / SELL -->
+    <label for="side">Side</label>
+    <select id="side">
+        <option value="buy">Buy</option>
+        <option value="sell">Sell</option>
+    </select>
+
+    <!-- ENTRY -->
+    <label for="entry">Entry Price</label>
+    <input id="entry" type="number" placeholder="Entry Price" />
+
+    <!-- STOP LOSS / TAKE PROFIT -->
+    <label>Stop Loss / Take Profit</label>
+    <div class="row">
+        <button class="st-btn">Stop Loss</button>
+        <button class="tp-btn">Take Profit</button>
+    </div>
+
+    <!-- LOT SIZE / ACCOUNT BALANCE -->
+    <label>Lot Size / Account Balance</label>
+    <div class="row">
+        <input id="lot" class="small-input" type="number" placeholder="Lot Size" />
+        <input id="balance" class="small-input" type="number" placeholder="Account Balance" />
+    </div>
+
+    <!-- CALCULATE -->
+    <button class="calculate" onclick="calculate()">Calculate</button>
+
+    <div id="output"></div>
+</div>

@@ -1,0 +1,144 @@
+/* ============================= */
+/* GENERAL BODY SETUP */
+/* ============================= */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    padding: 10px;
+}
+
+/* ============================= */
+/* CALCULATOR CONTAINER */
+/* ============================= */
+#calculator {
+    background-color: #1e1e1e;
+    padding: 25px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    width: 100%;
+    max-width: 400px; /* keeps it mobile-friendly */
+    text-align: center;
+}
+
+/* ============================= */
+/* SECTION HEADINGS / LABELS */
+/* ============================= */
+h2 {
+    margin-bottom: 20px;
+    font-size: 22px;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ============================= */
+/* INPUTS AND SELECTORS */
+/* ============================= */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #ffffff;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Reduce input width for small paired boxes */
+.small-input {
+    width: 48%;
+}
+
+/* ============================= */
+/* FLEX ROWS FOR SAME LINE INPUTS */
+/* ============================= */
+.row {
+    display: flex;
+    justify-content: space-between;
+    gap: 4%;
+    margin-bottom: 15px;
+}
+
+/* ============================= */
+/* STOP LOSS AND TAKE PROFIT BUTTONS */
+/* ============================= */
+.st-btn {
+    width: 48%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.stop-btn {
+    background-color: #ff3b3b; /* red */
+}
+
+.tp-btn {
+    background-color: #3b8cff; /* blue */
+}
+
+/* ============================= */
+/* CALCULATE BUTTON */
+/* ============================= */
+button.calculate {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: #ff3b3b;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+button.calculate:hover {
+    background-color: #ff5757;
+}
+
+/* ============================= */
+/* OUTPUT BOX */
+/* ============================= */
+#output {
+    margin-top: 20px;
+    background-color: #2a2a2a;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    white-space: pre-line;
+}
+
+/* ============================= */
+/* RESPONSIVE MOBILE OPTIMIZATION */
+/* ============================= */
+@media (max-width: 480px) {
+    #calculator {
+        padding: 20px 15px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .small-input, .st-btn, .tp-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}

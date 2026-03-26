@@ -1,0 +1,24 @@
+function calculate() {
+    // get values from inputs
+    let entry = parseFloat(document.getElementById("entry").value);
+    let stop = parseFloat(document.getElementById("stop").value);
+    let tp = parseFloat(document.getElementById("tp").value);
+
+    // check for invalid inputs
+    if (!entry || !stop || !tp) {
+        document.getElementById("output").innerText = "Please enter all values!";
+        return;
+    }
+
+    // calculate risk %, reward %, and R:R
+    let risk = ((entry - stop) / entry) * 100;
+    let reward = ((tp - entry) / entry) * 100;
+    let rr = (reward / risk).toFixed(2);
+
+    // display results
+    document.getElementById("output").innerText = `
+Risk: ${risk.toFixed(2)}%
+Reward: ${reward.toFixed(2)}%
+R:R = ${rr}
+`;
+}

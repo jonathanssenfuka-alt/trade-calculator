@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Trade Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- NAVIGATION -->
+    <nav class="top-nav">
+        <button onclick="location.href='index.html'">Dashboard</button>
+        <button onclick="location.href='calculator.html'">Calculator</button>
+        <button onclick="location.href='planned.html'">Planned Trades</button>
+        <button onclick="location.href='journal.html'">Journal</button>
+    </nav>
+
+    <!-- CALCULATOR -->
+    <div id="calculator">
+        <h2>Pro Trade Calculator</h2>
+
+        <!-- SYMBOL -->
+        <label for="symbol">Trading Pair</label>
+        <select id="symbol">
+            <option value="" disabled selected>Select Symbol</option>
+            <!-- Forex Majors -->
+            <option value="EUR/USD">EUR/USD</option>
+            <option value="GBP/USD">GBP/USD</option>
+            <option value="USD/JPY">USD/JPY</option>
+            <option value="USD/CHF">USD/CHF</option>
+            <option value="AUD/USD">AUD/USD</option>
+            <option value="NZD/USD">NZD/USD</option>
+            <option value="USD/CAD">USD/CAD</option>
+            <!-- Commodities -->
+            <option value="XAU/USD">Gold (XAU/USD)</option>
+            <option value="XAG/USD">Silver (XAG/USD)</option>
+            <!-- Other Pairs -->
+            <option value="EUR/GBP">EUR/GBP</option>
+            <option value="EUR/JPY">EUR/JPY</option>
+            <option value="GBP/JPY">GBP/JPY</option>
+            <option value="AUD/JPY">AUD/JPY</option>
+        </select>
+
+        <!-- BUY / SELL -->
+        <label for="side">Side</label>
+        <select id="side">
+            <option value="buy">Buy</option>
+            <option value="sell">Sell</option>
+        </select>
+
+        <!-- ENTRY -->
+        <label for="entry">Entry Price</label>
+        <input id="entry" type="number" placeholder="Entry Price" />
+
+        <!-- STOP LOSS / TAKE PROFIT -->
+        <label>Stop Loss / Take Profit</label>
+        <div class="row">
+            <input id="stop" class="small-input" type="number" placeholder="Stop Loss" />
+            <input id="tp" class="small-input" type="number" placeholder="Take Profit" />
+        </div>
+
+        <!-- LOT SIZE / ACCOUNT BALANCE -->
+        <label>Lot Size / Account Balance</label>
+        <div class="row">
+            <input id="lot" class="small-input" type="number" placeholder="Lot Size" />
+            <input id="balance" class="small-input" type="number" placeholder="Account Balance" />
+        </div>
+
+        <!-- CALCULATE -->
+        <button class="calculate" onclick="calculate()">Calculate</button>
+
+        <div id="output"></div>
+
+        <!-- SAVE TRADE -->
+        <button id="saveBtn" class="save-btn" onclick="saveTrade()" style="display: none;">
+            Save Trade
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planned Trades</title>
+
+  <!-- LINK YOUR MAIN CSS -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- PAGE-SPECIFIC STYLES -->
+  <style>
+    body {
+      background: #0d0d0d;
+      color: #ffffff;
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    /* NAVBAR */
+    .navbar {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 15px;
+      background: #111;
+      border-bottom: 1px solid #222;
+    }
+
+    .navbar a {
+      color: #ccc;
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .navbar a:hover {
+      color: #fff;
+    }
+
+    /* PAGE TITLE */
+    .page-title {
+      text-align: center;
+      margin: 20px 0;
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
+    .trades-container {
+      padding: 15px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* TRADE CARD */
+    .trade-card {
+      background: #1a1a1a;
+      border: 1px solid #222;
+      border-radius: 12px;
+      padding: 15px;
+      margin-bottom: 12px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+    }
+
+    .trade-row {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 6px;
+      font-size: 14px;
+    }
+
+    .label {
+      color: #888;
+    }
+
+    .value {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    /* EMPTY STATE */
+    .empty-state {
+      text-align: center;
+      margin-top: 50px;
+      color: #777;
+      font-size: 14px;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <a href="index.html">Dashboard</a>
+    <a href="calculator.html">Calculator</a>
+    <a href="planned.html">Planned</a>
+    <a href="journal.html">Journal</a>
+  </div>
+
+  <!-- TITLE -->
+  <div class="page-title">Planned Trades</div>
+
+  <!-- TRADES CONTAINER -->
+  <div id="tradesContainer" class="trades-container">
+
+    <!-- Example empty state (JS will replace this if trades exist) -->
+    <div class="empty-state">
+      No planned trades yet.
+    </div>
+
+  </div>
+
+  <!-- CONNECT YOUR JS -->
+  <script src="script.js"></script>
+
+</body>
+</html>

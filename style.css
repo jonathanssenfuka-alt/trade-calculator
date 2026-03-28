@@ -1,84 +1,176 @@
-/* BODY */
 body {
     background-color: #121212;
-    color: #fff;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background: #1e1e1e;
+    padding: 10px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+/* DASHBOARD */
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.card {
+    background: #1e1e1e;
+    padding: 20px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: white;
+}
+
+/* DESKTOP */
+@media (min-width: 600px) {
+    .card-grid {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .card {
+        width: 200px;
+    }
+}
+
+/* KEEP YOUR CALCULATOR CSS BELOW (UNCHANGED) */
+/* /* ============================= */
+/* GENERAL BODY SETUP */
+/* ============================= */
+body {
+    background-color: #121212;
+    color: #ffffff;
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
     margin: 0;
     padding: 10px;
 }
 
+/* ============================= */
 /* CALCULATOR CONTAINER */
+/* ============================= */
 #calculator {
     background-color: #1e1e1e;
     padding: 25px 20px;
     border-radius: 12px;
-    box-shadow: 0 0 20px rgba(0,0,0,0.6);
+    box-shadow: 0 0 15px rgba(0,0,0,0.5);
     width: 100%;
-    max-width: 400px;
+    max-width: 400px; /* keeps it mobile-friendly */
     text-align: center;
 }
 
-/* HEADINGS */
+/* ============================= */
+/* SECTION HEADINGS / LABELS */
+/* ============================= */
 h2 {
     margin-bottom: 20px;
     font-size: 22px;
 }
 
-/* LABELS */
 label {
     display: block;
-    margin: 5px 0;
+    margin: 10px 0 5px;
+    font-weight: bold;
     font-size: 14px;
 }
 
-/* INPUTS AND SELECTS */
+/* ============================= */
+/* INPUTS AND SELECTORS */
+/* ============================= */
 input, select {
     width: 100%;
     padding: 8px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
     border-radius: 6px;
     border: none;
     background-color: #2a2a2a;
-    color: #fff;
+    color: #ffffff;
     font-size: 14px;
     box-sizing: border-box;
 }
 
-/* ROWS FOR SAME LINE INPUTS */
+/* Reduce input width for small paired boxes */
+.small-input {
+    width: 48%;
+}
+
+/* ============================= */
+/* FLEX ROWS FOR SAME LINE INPUTS */
+/* ============================= */
 .row {
     display: flex;
     justify-content: space-between;
     gap: 4%;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
-.small-input {
-    width: 100%;
+/* ============================= */
+/* STOP LOSS AND TAKE PROFIT BUTTONS */
+/* ============================= */
+.st-btn {
+    width: 48%;
+    padding: 10px 0;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
 }
 
+.stop-btn {
+    background-color: #ff3b3b; /* red */
+}
+
+.tp-btn {
+    background-color: #3b8cff; /* blue */
+}
+
+/* ============================= */
 /* CALCULATE BUTTON */
+/* ============================= */
 button.calculate {
     width: 100%;
     padding: 12px;
     border: none;
     border-radius: 6px;
     background-color: #ff3b3b;
-    color: #fff;
+    color: white;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;
-    transition: 0.2s;
+    transition: background-color 0.2s;
 }
 
 button.calculate:hover {
     background-color: #ff5757;
 }
 
+/* ============================= */
 /* OUTPUT BOX */
+/* ============================= */
 #output {
     margin-top: 20px;
     background-color: #2a2a2a;
@@ -86,6 +178,65 @@ button.calculate:hover {
     border-radius: 8px;
     font-size: 14px;
     white-space: pre-line;
+}
+
+/* ============================= */
+/* RESPONSIVE MOBILE OPTIMIZATION */
+/* ============================= */
+@media (max-width: 480px) {
+    #calculator {
+        padding: 20px 15px;
+    }
+
+    .row {
+        flex-direction: column;
+    }
+
+    .small-input, .st-btn, .tp-btn {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+} */
+
+/* ============================= */
+/* EXTRA IMPROVEMENTS */
+/* ============================= */
+
+/* CENTER PROPERLY */
+body {
+    min-height: 100vh;
+}
+
+/* BETTER LABEL ALIGNMENT */
+#calculator label {
+    text-align: left;
+}
+
+/* BETTER SPACING */
+#calculator input,
+#calculator select {
+    margin-bottom: 12px;
+}
+
+/* SAVE BUTTON */
+.save-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    background-color: #3b8cff;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* MOBILE FIX */
+@media (max-width: 480px) {
+    body {
+        align-items: flex-start;
+        padding-top: 20px;
+    }
 }
 
 /* RESPONSIVE */
